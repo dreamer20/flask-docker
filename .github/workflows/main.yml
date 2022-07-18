@@ -60,3 +60,6 @@ jobs:
           
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+      
+      - name: Test with pytest
+        run: pytest
