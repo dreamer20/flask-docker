@@ -39,3 +39,9 @@ jobs:
         run: pytest
         env:
           SELENIUM_GRID_HOST: selen
+  integration:
+    needs: container-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo to console
+        run: echo "hello world"
