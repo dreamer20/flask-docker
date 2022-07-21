@@ -19,5 +19,5 @@ def test_in_browser(host, port):
         command_executor=f'http://{SELENIUM_GRID_HOST}:4444',
         options=chrome_options
     )
-    driver.get(F"https://www.google.com")
+    driver.get(F"http://{APP_HOST}:{APP_PORT}")
     driver.quit()
